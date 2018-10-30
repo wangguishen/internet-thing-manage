@@ -1,0 +1,413 @@
+body {
+	background: $mbg;
+}
+.el-header {
+    background: $headbg !important;
+}
+.el-main, .el-footer, .el-aside {
+	background: $mbg !important;
+}
+.el-main {
+	overflow: visible !important;
+}
+// 表格样式修改
+// 1.表格头部标题背景及字体
+.el-table th{
+  background: $ttbg;
+  color: $mfc;
+}
+.el-table .el-table__header-wrapper th{
+	padding:10px 0;
+}
+// 2.表格第一个格hover显示3像素的蓝色边框
+.el-table .el-table__row > td:nth-child(1) {
+  box-sizing: border-box;
+  border-left: 3px solid transparent;
+}
+.el-table .el-table__row:hover > td:nth-child(1) {
+  border-left: 3px solid $btnred;
+}
+.el-table .el-table__row:hover{
+	background-color: $tbbg !important;
+}
+// 3.表格每格内容超出部分显示省略号
+.el-table .cell,.g-overflow-hide{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+// 4.表格头部第一个20像素内边距
+.g-table .el-table__header-wrapper .el-table_1_column_1.is-left .cell{
+	padding-left: 20px;
+}
+.el-table.l-tab-business thead {
+	display: none;
+}
+// 5.表格带点击显示小手形状
+.m-pointer-table.el-table .el-table__row:hover{
+	cursor: pointer;
+}
+// 6.特殊表格样式
+.m-special-table{
+	.el-table__header-wrapper{
+		.m-last-flag{
+			padding-left: 0;
+		}
+	}
+	.el-table__body-wrapper{
+		.m-last-twin-flag{
+			padding-left: 75px;
+			.cell{
+				padding-right: 16px;
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+// 搜索input输入框
+.g-search-ipt .el-input__inner{
+	height: 30px;
+	line-height: 30px;
+}
+.ipt-hgt .el-input__inner{
+	height: 40px;
+	line-height: 40px;
+}
+.g-search-ipt .el-input__icon{
+	line-height: 30px;
+}
+.g-form-ipt .g-item-ipt .el-input__inner,.g-form-ipt .g-item-ipt .el-form-item__label,.g-form-ipt .g-item-ipt .el-form-item__content{
+	height: 30px;
+	line-height: 30px;
+}
+// 主题头部信息块
+.g-header{
+	margin-bottom: 15px;
+	.g-top-left{
+		height: 30px;
+		line-height: 30px;
+		.g-nav-list{
+			font-size: 16px;
+			// font-weight: bold;
+			.el-breadcrumb__inner{
+				font-weight: initial;
+			}
+		}
+	}
+	.g-top-right{
+		text-align: right;
+		height:30px;
+		.g-top-ipt{
+			width: 50%;
+		}
+		.g-top-btn{
+			margin-left: 10px;
+		}
+	}
+}
+// 按钮
+// 1.无背景，有边框  主题红
+.s-no-bg-xq-btn{
+	border: 1px solid $btndelete;
+	color: $btndelete;
+	background: #fff;
+}
+//无边框
+.s-yes-bg-xa-btn {
+	border: none;
+	color: $btndelete;
+	background: #fff;
+}
+.el-button--mini{
+	padding: 8px 22px;
+}
+// 有图标的按钮
+.s-yes-icon.el-button--mini{
+	padding: 8px 13.5px;
+	.el-icon-plus{
+		color: rgba(255,255,255,.5);
+	}
+}
+// 三个字按钮
+.s-three-text-btn.el-button--mini{
+	padding: 8px 16px;
+}
+// 四个字按钮
+.s-four-text-btn.el-button--mini{
+	padding: 8px 10px;
+}
+//五个字按钮
+.s-five-text-btn.el-button--mini{
+	padding: 8px 4px;
+}
+// 分页
+.g-block{
+	text-align: right;
+	.el-pagination{
+		padding: 10px 0;
+		button.disabled, .btn-prev, .btn-next, .el-pager li{
+			background-color: transparent;
+		}
+		.el-pager li{
+			font-weight: normal;
+		}
+	}
+}
+
+// 上传图片
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-upload-small {
+	margin-right: 15px;
+	.el-upload {
+		width:40px;
+		height:40px;
+		line-height: 40px;
+		.avatar-uploader-icon{
+			font-size: 20px;
+		}
+	}
+}
+.avatar-uploader .el-upload:hover {
+	border-color: $btnred;
+}
+.avatar-uploader-icon {
+	font-size: 28px;
+	color: #8c939d;
+	width: calc(150px * 16 / 9);
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+.avatar {
+	width: calc(150px * 16 / 9);
+	height: 150px;
+	display: block;
+}
+.g-avatar-icon{
+	display: block;
+	width:40px;
+	height:40px;
+}
+
+// 导航条
+.g-distribute-header{
+	.el-menu--horizontal > .el-menu-item{
+		font-weight: bold;
+	}
+	.el-menu--horizontal > .el-menu-item.is-active{
+		border-bottom: 2px solid $btnred;
+    	color: $btnred;
+	}
+}
+
+// tab标签
+.el-menu--horizontal > .el-menu-item{
+    height: 50px;
+    line-height: 50px;
+}
+
+//下拉选项
+.el-select {
+	width: 50%;
+}
+
+//form表单样式
+.g-form-ipt { 
+  .el-form-item__label { 
+    font-weight: bold;
+    color: #112331;
+  }
+	.el-input--suffix .el-input__inner { //级联选择
+		height: 30px;
+		line-height: 30px;
+	}
+	.el-cascader {
+		width: 60%;
+	}
+	.el-form-item {
+		margin-bottom: 15px;
+	}
+}
+.g-item-cascader{
+	.el-form-item__label{
+		margin-top: 5px;
+	}
+	.el-cascader {
+		width: 50%;
+	}
+}
+
+.g-content { //资源外层div样式
+	background: #fff;
+  // min-height: 70vh;
+  .el-menu--horizontal{
+  	border:1px solid #e6e6e6;
+		border-bottom:none;
+		border-radius: 3px 3px 0 0;
+  }
+}
+
+// table边框
+.g-table-all-border{
+	width: 100%;
+	border: 1px solid #e3e9ec;
+	border-radius: 3px;
+}
+.g-table-check-border{
+	width: 100%;
+	border: 1px solid #e3e9ec;
+	border-radius: 0 0 3px 3px;
+}
+// 弹框样式
+.g-sdk-details-box{
+	.el-dialog{
+		border-radius: 3px;
+		.el-dialog__header{
+			padding: 0;
+			height: 40px;
+			line-height: 40px;
+			color:#fff;
+			background-color: $btnred;
+			text-align: left;
+			.el-dialog__headerbtn{
+				top: 0;
+				.el-dialog__close{
+					color: $def;
+				}
+			}
+		}
+		.el-dialog__body{
+			.el-form-item{
+				margin-bottom: 15px;
+			}
+		}
+		.el-dialog__footer{
+			text-align: center;
+			.el-button + .el-button{
+				margin-left: 60px;
+			}
+		}
+	}
+	.el-dialog--center {
+		.el-dialog__body{
+		    padding: 25px 25px 0px;
+		}
+	}
+}
+.g-renew-box{
+	.el-dialog{
+		.el-dialog__body{
+			padding: 30px 0;
+		}
+	}
+}
+
+//删除提示图标大小
+.el-message-box__status::before {
+	font-size: smaller;
+}
+/* 应用管理-应用详情超出隐藏 */
+.ovHid .el-col-20 {
+	overflow:hidden;
+}
+
+/* popober自动换行 */
+.el-popover {
+	word-break: break-all; 
+	word-wrap:break-word;
+}
+.g-scope-hover .name-wrapper{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.el-popover{
+	max-width:30%;
+}
+
+/* textarea高度 */
+.g-unpass-ta .el-textarea.is-disabled .el-textarea__inner {
+	height: 150px;
+}
+.g-unpass-ta .s-unpass-ta.el-textarea .el-textarea__inner {
+	height: 150px;
+}
+.g-audit-ta .el-textarea.is-disabled .el-textarea__inner {
+	min-height: 80px;
+	height: 80px;
+}
+.g-audit-ta .s-unpass-ta.el-textarea .el-textarea__inner {
+	min-height: 80px;
+	height: 80px;
+}
+
+/* cascader宽度 */
+.el-cascader-menu {
+  width: 280px;
+}
+
+/* checkbox */
+.g-checkbox {
+	.el-checkbox {
+		width: 33.3%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+  .el-checkbox + .el-checkbox {
+	  margin-left: 0;
+	}  
+}
+
+/* 接口调试样式 */
+// .g-request-box .input-with-select .el-input-group__prepend{
+// 	padding: 0;
+// }
+.g-request-select-box .g-select-post input{
+	border-radius: 0;
+}
+.g-request-box .input-with-select .el-select .el-input {
+  width: 150px;
+}
+.g-request-box .input-with-select .el-select {
+	width: 100%;
+	margin: -10px 0;
+}
+.g-parameter-sty .g-item-ipt input {
+	height: 30px;
+	line-height: 30px;
+}
+
+.g-ipt-number input::-webkit-outer-spin-button,
+.g-ipt-number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.g-ipt-number input[type="number"]{
+  -moz-appearance: textfield;
+}
+.s-encrypt-box{
+	.el-dialog{
+		background: transparent;
+		box-shadow: 0 0;
+		.el-dialog__body{
+			color: #FFF;
+		}
+	}
+}
+.g-upload-path{
+	width: 100%;
+	.el-upload{
+		display: block;
+		text-align: left;
+	}
+	.el-upload-list{
+		width: 60%;
+	}
+}
