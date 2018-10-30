@@ -1,6 +1,6 @@
-# internet-thing
+# internet-thing-manage
 
-> A Vue.js project
+> A Vue.js project  -->  This is based on the background management system of the iot framework, which facilitates the management of applications, access rights of terminal equipment, algorithm installation package management, key management and enterprise management system, and makes the application specific
 
 ## Build Setup
 
